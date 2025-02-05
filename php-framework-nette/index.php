@@ -2,17 +2,17 @@
 <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8; X-Wap-Proxy-Cookie=none" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Zhea丨源码演示</title>
+    <title>聊天</title>
     <link type="text/css" href="app/style/chat.css?v=1.2" rel="stylesheet" />
 </head>
 <body>
-<div class="top"><span class="name">柚儿园丨多人在线聊天</span></div>
+<div class="top"><span class="name">HUA丨多人在线聊天</span></div>
 <?php
 require_once 'app/app.php';
 if(empty(@$_COOKIE[KEYS.'_name'])){
 	echo '<div class="write login">                
                 <input type="text" value="'.rand_nick().'" id="nick" maxlength="5" placeholder="请随便输入昵称.." />                
-                <a href="javascript:;" id="login" class="write-link send">进♂入</a>
+                <a href="javascript:;" id="login" class="write-link send">进入</a>
 </div>';	      
 } 
 echo '<div class="talk mk-chat-box">     
