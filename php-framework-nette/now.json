@@ -1,5 +1,5 @@
 {
   "builds": [
-    { "src": "*.php", "use": "now-php@0.5.2" }
+    { "src": "*.php", "use": "now-php@0.0.10" }
   ]
 }
