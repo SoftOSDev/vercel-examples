@@ -2,9 +2,9 @@
 error_reporting(0);
 session_start();
 define('BASE_PATH',str_replace('\\','/',dirname(__FILE__))."/");
-define('ROOT_PATH',str_replace('app/','',BASE_PATH));
-define('MSGFILE','app/MSG.txt'); 
-define('NUMFILE','app/NUM.txt'); 
+define('ROOT_PATH',str_replace('./','',BASE_PATH));
+define('MSGFILE','MSG.txt'); 
+define('NUMFILE','NUM.txt'); 
 define('KEYS','bskdl87'); 
 define('LSTR','admin');
 date_default_timezone_set('PRC');
@@ -17,7 +17,7 @@ if(empty($user)){
     $arr['msg'] = '<span>'.date('Y-m-d H:i').'</span>';
 	$arr['type']= 'sys';
 	$str = json_encode($arr);
-	$arr['msg'] = '<span class="tips-warning">能猫提示：<strong>'.$name.'</strong>加入聊天</span>';
+	$arr['msg'] = '<span class="tips-warning">提示：<strong>'.$name.'</strong>加入聊天</span>';
 	$arr['type']= 'sys';
 	$str = $str."\n".json_encode($arr);
 	file_put_contents(ROOT_PATH.MSGFILE, $str."\n" , FILE_APPEND|LOCK_EX);
