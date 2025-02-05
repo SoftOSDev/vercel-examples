@@ -17,7 +17,7 @@ if(empty($user)){
     $arr['msg'] = '<span>'.date('Y-m-d H:i').'</span>';
 	$arr['type']= 'sys';
 	$str = json_encode($arr);
-	$arr['msg'] = '<span class="tips-warning">能猫提示：<strong>'.$name.'</strong>加入聊天</span>';
+	$arr['msg'] = '<span class="tips-warning">提示：<strong>'.$name.'</strong>加入了聊天</span>';
 	$arr['type']= 'sys';
 	$str = $str."\n".json_encode($arr);
 	file_put_contents(ROOT_PATH.MSGFILE, $str."\n" , FILE_APPEND|LOCK_EX);
